@@ -5,7 +5,7 @@ public class MemberServiceImpl implements MemberService {
     private final MemberRepository memberRepository;
 
     // 생성자 주입 (DI 주입)
-    public MemberServiceImpl(MemoryMemberRepository memberRepository) {
+    public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
