@@ -1,4 +1,4 @@
-package com.example.springboot2.beanfine;
+package com.example.springboot2.beanfind;
 
 import com.example.springboot2.AppConfig;
 import com.example.springboot2.member.MemberService;

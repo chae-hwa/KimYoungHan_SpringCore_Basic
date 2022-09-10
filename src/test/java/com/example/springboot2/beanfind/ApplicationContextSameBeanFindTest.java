@@ -1,7 +1,5 @@
-package com.example.springboot2.beanfine;
+package com.example.springboot2.beanfind;
 
-import com.example.springboot2.AppConfig;
-import com.example.springboot2.discount.DiscountPolicy;
 import com.example.springboot2.member.MemberRepository;
 import com.example.springboot2.member.MemoryMemberRepository;
 import org.junit.jupiter.api.DisplayName;
