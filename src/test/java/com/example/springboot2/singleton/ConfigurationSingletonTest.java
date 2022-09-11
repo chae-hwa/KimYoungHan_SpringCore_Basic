@@ -30,4 +30,15 @@ public class ConfigurationSingletonTest {
         assertThat(memberService.getMemberRepository()).isSameAs(memberRepository);
         assertThat(orderService.getMemberRepository()).isSameAs(memberRepository);
     }
+
+    @Test
+    void configurationDepp(){
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        //AppConfig도 스프링 빈으로 등록된다.
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println("bean.getClass() = " + bean.getClass());
+        // 출력 : class com.example.springboot2.AppConfig$$EnhancerBySpringCGLIB$$81801cc1
+    }
 }
