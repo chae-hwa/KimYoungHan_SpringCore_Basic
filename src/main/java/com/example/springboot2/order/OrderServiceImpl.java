@@ -4,7 +4,9 @@ import com.example.springboot2.discount.DiscountPolicy;
 import com.example.springboot2.member.Member;
 import com.example.springboot2.member.MemberRepository;
 import com.example.springboot2.member.MemoryMemberRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements  OrderService {
 
     private final MemberRepository memberRepository;
