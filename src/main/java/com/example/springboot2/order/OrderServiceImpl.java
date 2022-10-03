@@ -16,7 +16,7 @@ public class OrderServiceImpl implements  OrderService {
     private final DiscountPolicy discountPolicy;
 
     // 생성자 주입 (DI 주입) @RequiredArgsConstructor가 자동으로 만들어줌.
-    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository; // final을 붙일 때 필수 사용
         this.discountPolicy = discountPolicy; // final을 붙일 때 필수 사용
     }
