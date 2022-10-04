@@ -1,5 +1,6 @@
 package com.example.springboot2.order;
 
+import com.example.springboot2.annotation.MainDiscountPolicy;
 import com.example.springboot2.discount.DiscountPolicy;
 import com.example.springboot2.member.Member;
 import com.example.springboot2.member.MemberRepository;
@@ -16,7 +17,7 @@ public class OrderServiceImpl implements  OrderService {
     private final DiscountPolicy discountPolicy;
 
     // 생성자 주입 (DI 주입) @RequiredArgsConstructor가 자동으로 만들어줌.
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository; // final을 붙일 때 필수 사용
         this.discountPolicy = discountPolicy; // final을 붙일 때 필수 사용
     }
