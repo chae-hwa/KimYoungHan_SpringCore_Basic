@@ -1,6 +1,9 @@
 package com.example.springboot2.lifeCycle;
 
-public class NetworkClient {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class NetworkClient implements InitializingBean, DisposableBean {
 
     private String url;
 
@@ -27,14 +30,24 @@ public class NetworkClient {
         System.out.println("close : " + url);
     }
 
+<<<<<<< HEAD
     public void init() throws Exception {
         System.out.println("NetworkClient.init");
+=======
+    @Override
+    public void afterPropertiesSet() throws Exception {
+>>>>>>> ca517c750b68d139a01abcfd6b6829328440718a
         connect();
         call("초기화 연결 메세지");
     }
 
+<<<<<<< HEAD
     public void close() throws Exception {
         System.out.println("NetworkClient.close");
+=======
+    @Override
+    public void destroy() throws Exception {
+>>>>>>> ca517c750b68d139a01abcfd6b6829328440718a
         disconnect();
     }
 }
